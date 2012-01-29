@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Message;
 import android.os.Parcel;
 import android.os.SystemProperties;
+import android.util.Log;
 import static com.android.internal.telephony.RILConstants.*;
 
 public class SamsungHCRIL extends RIL implements CommandsInterface {
@@ -13,7 +14,7 @@ public class SamsungHCRIL extends RIL implements CommandsInterface {
     public SamsungHCRIL(Context context, int networkMode, int cdmaSubscription) {
         super(context, networkMode, cdmaSubscription);
     }
-
+    static final String LOG_TAG = "RILJ";
     //SAMSUNG SGS STATES
     static final int RIL_UNSOL_STK_SEND_SMS_RESULT = 11002;
     static final int RIL_UNSOL_O2_HOME_ZONE_INFO = 11007;
